@@ -22,7 +22,7 @@ const isCurr = (start_time < curr_time) && (curr_time < end_time)
 
 const rotDeg = Math.random() * 360
 ---
-<div class="flex flex-col gap-3 bg-[#ffffff0F] rounded-2xl p-5 sm:min-w-82 max-w-108 sm:h-64 relative">
+<div class="flex flex-col gap-3 bg-[#ffffff0F] rounded-2xl p-5 sm:min-w-82 max-w-111 sm:h-70 relative">
     <!-- stars -->
     {
         eventData.tags.includes("❗ Mandatory") &&
@@ -43,13 +43,20 @@ const rotDeg = Math.random() * 360
     <h2 class="text-xl font-bold text-left leading-relaxed">{eventData.time}</h2>
     <p>{eventData.description}</p>
     <div class="flex-grow"></div>
-    <div class="flex flex-row gap-3 justify-self-end">
+    <div class="flex flex-row gap-3 justify-self items-end w-full">
         {
-            eventData.tags.map((tag) => (
-                <div class="max-w-xs border-1 border-white rounded-full p-3 font-bold">
-                    <h2>{tag}</h2>
-                </div>
-            ))
+            eventData.tags.map((tag) => {
+                const shouldWrap =  eventData.title.includes("Check-In & Breakfast");
+                return (
+                    <div class={`border-1 border-white rounded-full p-3 font-bold text-center
+                        ${shouldWrap 
+                            ? "max-w-[140px] break-words" 
+                            : "whitespace-nowrap" 
+                        }`}>
+                        <h2>{tag}</h2>
+                    </div>
+                )
+        })
         }
     </div>
 </div>

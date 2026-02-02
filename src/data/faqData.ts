@@ -14,7 +14,7 @@ export const faqData: FAQItem[] = [
   {
     question: 'What is the deadline to apply for SparkHacks?',
     answer:
-      'Applications will open on January 20 at 8:00 AM and will remain open until January 27 at 11:59 PM. After applications close, the organizing team will review all submissions and send out invitations, waitlist notifications, and declinations within the next few days. If you receive an invitation, you’ll need to accept or decline your spot. Once you accept, we’ll be able to confirm your attendance at the hackathon. Please apply as early as possible, since spots are limited! If you’re applying with a team, make sure everyone applies as soon as possible as well.',
+      'Applications will open on January 20 at 8:00 AM and will remain open until January 27 at 11:59 PM. After applications close, the organizing team will review all submissions and send out invitations, waitlist notifications, and declinations within the next few days. If you receive an invitation, you’ll need to accept or decline your spot. Once you accept, we’ll be able to confirm your attendance at the hackathon.',
     category: 'General',
   },
   {
@@ -158,6 +158,11 @@ export const faqData: FAQItem[] = [
   {
     "question": "My application was rejected, can I still participate in SparkHacks 2026?",
     "answer": "Unfortunately, due to limitations and the high number of applications, this decision is final. Please consider reapplying next year and follow our social media to keep up to date.",
+    "category": "General"
+  },
+  {
+    "question": "How were SparkHacks 2026 applications reviewed and selected?",
+    "answer": "SparkHacks applications were NOT reviewed on a first-come, first-served basis, and submission timing was not considered. To reduce bias, applications were reviewed without names or identifying information and evaluated holistically rather than on merit, accolades, or prior achievements. Our goal is to welcome a balanced group of participants, including underclassmen who want to learn and try new things and upperclassmen looking to strengthen their portfolios. Responses such as “Why are you interested in SparkHacks?” helped provide context, but no single question or factor determined acceptance. Decisions were made to align with SparkHacks’ mission of creating an inclusive, learning-focused experience for all participants.",
     "category": "General"
   },
   {
