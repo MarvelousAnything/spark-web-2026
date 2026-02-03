@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Naga Maddipudi",
     title: "Director",
-    image: "/headshots/naga.JPG",
+    image: "/headshots/naga.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/naga-maddipudi/",
@@ -10,7 +10,7 @@ export const teamMembers = [
   {
     name: "Kaito Sekiya",
     title: "Director",
-    image: "headshots/kaito.JPG",
+    image: "/headshots/kaito.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/kaitosekiya/",
@@ -18,7 +18,7 @@ export const teamMembers = [
   {
     name: "Kaustubha Medikundam",
     title: "Communications Lead",
-    image: "headshots/kaustubha.JPG",
+    image: "/headshots/kaustubha.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/kmedikundam/",
@@ -26,7 +26,7 @@ export const teamMembers = [
   {
     name: "Florianne Che",
     title: "Web Development Lead",
-    image: "headshots/flori.PNG",
+    image: "/headshots/flori.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/florianne-che/",
@@ -34,7 +34,7 @@ export const teamMembers = [
   {
     name: "Nathan Trinh",
     title: "Web Development Lead",
-    image: "headshots/nathan.JPG",
+    image: "/headshots/nathan.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/khoi-nguyen-trinh/",
@@ -42,7 +42,7 @@ export const teamMembers = [
   {
     name: "Eman Arsham",
     title: "Outreach",
-    image: "headshots/eman.jpeg",
+    image: "/headshots/eman.webp",
     year: "Senior",
     major: "CS + Design",
     linkedin: "https://www.linkedin.com/in/emanarsham/",
@@ -50,7 +50,7 @@ export const teamMembers = [
   {
     name: "Niharika Patil",
     title: "Outreach",
-    image: "headshots/niharika.JPG",
+    image: "/headshots/niharika.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "http://linkedin.com/in/niharika-patil1468/",
@@ -58,7 +58,7 @@ export const teamMembers = [
   {
     name: "Huda Syed",
     title: "Outreach",
-    image: "headshots/huda.JPG",
+    image: "/headshots/huda.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/huda-syed17933/",
@@ -66,7 +66,7 @@ export const teamMembers = [
   {
     name: "Mina Pattanaik",
     title: "Outreach",
-    image: "headshots/mina.JPG",
+    image: "/headshots/mina.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/mina-pattanaik/",
@@ -74,7 +74,7 @@ export const teamMembers = [
   {
     name: "Sena Ozcan",
     title: "Logistics",
-    image: "headshots/sena.JPG",
+    image: "/headshots/sena.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/sena-ozcan/",
@@ -82,7 +82,7 @@ export const teamMembers = [
   {
     name: "Gerard Wilbert",
     title: "Logistics",
-    image: "headshots/gerard.JPG",
+    image: "/headshots/gerard.webp",
     year: "Senior",
     major: "Mechanical Engineering",
     linkedin: "https://www.linkedin.com/in/gerard-wilbert-a94636291/",
@@ -90,7 +90,7 @@ export const teamMembers = [
   {
     name: "Mehtab Kaur",
     title: "Logistics",
-    image: "headshots/mehtab.JPG",
+    image: "/headshots/mehtab.webp",
     year: "Sophomore",
     major: "Data Science",
     linkedin: "https://www.linkedin.com/in/mehtabkaurr/",
@@ -98,7 +98,7 @@ export const teamMembers = [
   {
     name: "Stanley Huang",
     title: "Logistics",
-    image: "headshots/stanley.JPG",
+    image: "/headshots/stanley.webp",
     year: "Sophomore",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/stanley-huang12/",
@@ -106,7 +106,7 @@ export const teamMembers = [
   {
     name: "Zaina Khalil",
     title: "Communications",
-    image: "headshots/zaina.jpg",
+    image: "/headshots/zaina.webp",
     year: "Junior",
     major: "Data Science",
     linkedin: "https://www.linkedin.com/in/zainakhalil/",
@@ -114,7 +114,7 @@ export const teamMembers = [
   {
     name: "Kavya Patel",
     title: "Communications",
-    image: "headshots/kavya.JPG",
+    image: "/headshots/kavya.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/kavya-patel-780314280/",
@@ -122,7 +122,7 @@ export const teamMembers = [
   {
     name: "Rajvi Shah",
     title: "Experience",
-    image: "headshots/rajvi.JPG",
+    image: "/headshots/rajvi.webp",
     year: "Senior",
     major: "CS + Linguistics",
     linkedin: "https://www.linkedin.com/in/rajvi-shah12/",
@@ -130,7 +130,7 @@ export const teamMembers = [
   {
     name: "Rawisara Hameyotin",
     title: "Experience",
-    image: "headshots/mj.JPG",
+    image: "/headshots/mj.webp",
     year: "Junior",
     major: "Data Science",
     linkedin: "https://www.linkedin.com/in/rawisarahameyotin/",
@@ -138,7 +138,7 @@ export const teamMembers = [
   {
     name: "Adithya Prasad",
     title: "Experience",
-    image: "headshots/adithya.JPG",
+    image: "/headshots/adithya.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/adithya-prasad16/",
@@ -146,7 +146,7 @@ export const teamMembers = [
   {
     name: "Rasleen Dhaliwal",
     title: "Experience",
-    image: "headshots/rasleen.JPG",
+    image: "/headshots/rasleen.webp",
     year: "Senior",
     major: "CS + Design",
     linkedin: "https://www.linkedin.com/in/rasleen-dhaliwal-/",
@@ -154,7 +154,7 @@ export const teamMembers = [
   {
     name: "Dominic Irla",
     title: "Web Development",
-    image: "headshots/dominic.png",
+    image: "/headshots/dominic.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/dominic-irla/",
@@ -162,7 +162,7 @@ export const teamMembers = [
   {
     name: "Josephine Lee",
     title: "Web Development",
-    image: "headshots/josephine.JPG",
+    image: "/headshots/josephine.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/josephine-b-l/",
@@ -170,7 +170,7 @@ export const teamMembers = [
   {
     name: "Daniel Barajas",
     title: "Web Development",
-    image: "headshots/daniel.JPG",
+    image: "/headshots/daniel.webp",
     year: "Senior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/danbarajas/",
@@ -178,7 +178,7 @@ export const teamMembers = [
   {
     name: "Fatima Rasheed",
     title: "Web Development",
-    image: "headshots/fatima.jpg",
+    image: "/headshots/fatima.webp",
     year: "Junior",
     major: "Computer Science",
     linkedin: "https://www.linkedin.com/in/fatima-rasheed-/",
