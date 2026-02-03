@@ -162,7 +162,7 @@ export const faqData: FAQItem[] = [
   },
   {
     "question": "How were SparkHacks 2026 applications reviewed and selected?",
-    "answer": "SparkHacks applications were NOT reviewed on a first-come, first-served basis, and submission timing was not considered. To reduce bias, applications were reviewed without names or identifying information and evaluated holistically rather than on merit, accolades, or prior achievements. Our goal is to welcome a balanced group of participants, including underclassmen who want to learn and try new things and upperclassmen looking to strengthen their portfolios. Responses such as “Why are you interested in SparkHacks?” helped provide context, but no single question or factor determined acceptance. Decisions were made to align with SparkHacks’ mission of creating an inclusive, learning-focused experience for all participants.",
+    "answer": "SparkHacks applications were NOT reviewed on a first-come, first-served basis, and submission timing was not considered. To reduce bias, applications were reviewed without names or identifying information and evaluated holistically rather than on merit, accolades, or prior achievements. Our goal is to welcome a balanced group of participants, including underclassmen who want to learn and try new things and upperclassmen looking to strengthen their portfolios. Decisions were made to align with SparkHacks’ mission of creating an inclusive, learning-focused experience for all participants.",
     "category": "General"
   },
   {
