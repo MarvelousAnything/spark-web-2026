@@ -13,7 +13,7 @@ export default defineConfig({
   adapter: vercel({
     imageService: true,
     imagesConfig: {
-      sizes: [],
+      sizes: [400, 720, 800, 1080],
       formats: ["image/webp"],
       dangerouslyAllowSVG: true
     }
