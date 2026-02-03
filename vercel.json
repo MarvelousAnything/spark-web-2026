@@ -1,4 +1,13 @@
 {
+  "rewrites": [
+    { "source": "/headshots/:name.JPG", "destination": "/headshots/:name.webp" },
+    { "source": "/headshots/:name.jpg", "destination": "/headshots/:name.webp" },
+    { "source": "/headshots/:name.jpeg", "destination": "/headshots/:name.webp" },
+    { "source": "/headshots/:name.PNG", "destination": "/headshots/:name.webp" },
+    { "source": "/headshots/:name.png", "destination": "/headshots/:name.webp" },
+    { "source": "/teams/:name.JPG", "destination": "/teams/:name.webp" },
+    { "source": "/teams/:name.jpg", "destination": "/teams/:name.webp" }
+  ],
   "headers": [
     {
       "source": "/headshots/(.*)",
