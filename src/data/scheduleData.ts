@@ -55,7 +55,7 @@ export const scheduleData = [
                 "title": "De-Stress: Mario Kart!",
                 "time": "8:00 PM - 9:00 PM",
                 "description": "Take a breather, compete with friends in Mario Kart, and enjoy some midnight snacks!",
-                "tags": ["Social", "Snacks", "Location: CDRLC 1426"],
+                "tags": ["Social", "Snacks", "Location: Learning Center"],
                 "utc_start": "2026-02-06T20:00:00.000-06:00",
                 "utc_end": "2026-02-06T21:00:00.000-06:00"
             },
@@ -93,7 +93,7 @@ export const scheduleData = [
                 "title": "De-Stress: Charades!",
                 "time": "3:00 PM - 5:00 PM",
                 "description": "Unwind and enjoy a game of charades with your fellow hackers!",
-                "tags": ["Social", "Location: CDRLC 1426"],
+                "tags": ["Social", "Location: Learning Center"],
                 "utc_start": "2026-02-07T15:00:00.000-06:00",
                 "utc_end": "2026-02-07T17:00:00.000-06:00"
             },
