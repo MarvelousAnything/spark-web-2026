@@ -1,7 +1,4 @@
 {
-  "images": {
-    "unoptimized": true
-  },
   "headers": [
     {
       "source": "/headshots/(.*)",
