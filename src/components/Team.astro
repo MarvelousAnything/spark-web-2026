@@ -1,27 +1,34 @@
 ---
 import { teamMembers } from "../data/teamMembers";
+import { teamPhotos } from "../data/teamPhotos";
 
-import Board from '../assets/team/new_set/board.svg?url';
-import FilmCircle from '../assets/team/new_set/film_reel_circle.svg?url';
-import FilmReel from '../assets/team/new_set/film_reel.svg?url';
+import Board from '../assets/team/new_set/board.svg';
+import FilmCircle from '../assets/team/new_set/film_reel_circle.svg';
+import FilmReel from '../assets/team/new_set/film_reel.svg';
 import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
+import LargeFilmReel from "../../public/teams/film_reel_large.svg";
+import { Image } from "astro:assets";
+
 ---
 <div id="team" class="w-full relative md:pt-10 lg:pt-20 xl:pt-30 overflow-x-hidden bg-linear-to-b from-[#1A2766] to-[#1A2766]">
   <div class="relative w-full sm:mb-4 sm:pb-8 lg:mb-32 lg:pb-25">
     <div class="relative w-full flex justify-center items-center min-h-[25vh] md:min-h-[300px] mt-10">
       
-      <img 
+      <Image 
         src={Board}
+        alt="board"
         class="absolute -left-12 top-1/2 -translate-y-1/2 w-[50vw] md:w-[25vw] max-w-[750px] md:max-w-[500px] h-auto z-10" 
       />
       
-      <img 
+      <Image 
         src={FilmCircle} 
+        alt = "film circle"
         class="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 w-[30vw] md:w-[24vw] max-w-[350px] h-auto z-10" 
       />
 
-      <img 
+      <Image 
         src={FilmReel} 
+        alt="film reel"
         class="absolute left-1/2 transform -translate-x-1/2 w-full h-auto scale-300 sm:scale-105 md:scale-105 opacity-70"
       />
       
@@ -33,8 +40,9 @@ import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
 
   <div class="max-w-6xl mx-auto my-16 md:my-32 lg:mg-32 relative z-30">
     <div class="relative">
-      <img 
-        src="teams/film_reel_large.svg" 
+      <Image 
+        src={LargeFilmReel}
+        alt="film reel large"
         class="w-full h-auto scale-x-150 scale-y-160 sm:scale-y-130 md:scale-x-200 md:scale-y-135 xl:scale-x-260 xl:scale-y-165 left-1/2" 
       />
 
@@ -47,11 +55,25 @@ import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
         
         <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-[120%] sm:left-20 md:left-10 lg:-left-20 sm:translate-x-0 flex flex-col items-center">
           <div class="relative transform">
-            <img 
-              id="teamPhoto" 
-              src="" 
-              class="w-36 h-48 sm:w-90 sm:h-70 md:w-150 md:h-90 lg:w-180 lg:h-120 object-cover rounded-lg shadow-2xl grayscale"
-            />
+            <div class="w-36 h-48 sm:w-90 sm:h-70 md:w-150 md:h-90 lg:w-180 lg:h-120">
+              {Object.entries(teamPhotos).map(([teamName, image], index) => (
+              <Image 
+                src={image}
+                alt={`${teamName} team`}
+                class="team-photo object-covert rounded-lg shadow-2xl grayscale"
+                class:list={{ hidden: index !== 0 }}
+                data-index={index}
+                widths={[256]}
+                sizes="256px"
+                format="webp"
+              />
+              ))}
+            </div>
+            <!-- <img  -->
+            <!--   id="teamPhoto"  -->
+            <!--   src=""  -->
+            <!--   class="w-36 h-48 sm:w-90 sm:h-70 md:w-150 md:h-90 lg:w-180 lg:h-120 object-cover rounded-lg shadow-2xl grayscale" -->
+            <!-- /> -->
           </div>
         </div>
         
@@ -59,12 +81,19 @@ import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
           <div class="relative w-fit">
             <div class="-rotate-6 transform transition-transform hover:rotate-0">
               <a class="memberLink" href="" target="_blank">
-                <img 
-                  id="memberPhoto" 
-                  src="" 
-                  class="relative w-16 h-16 sm:w-32 sm:h-32 md:w-48 md:h-48 object-cover z-10"
-                />
-                <!-- <span class="absolute -top-4 md:-top-2 -right-3 md:right-0 w-[150%] h-[150%] md:w-full md:h-full animate-pulse rounded-full bg-vanilla blur-xl md:blur-3xl opacity-75 z-0" /> -->
+                <div class="relative w-16 h-16 sm:w-32 sm:h-32 md:w-48 md:h-48">
+                  {teamMembers.map((member, index) => (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    class="member-photo absolute inset-0 object-cover z-10 transition-opacity"
+                    class:list={{ hidden: index !== 0 }}
+                    widths={[192]}
+                    sizes="192px"
+                    format="webp"
+                  />
+                  ))}
+                </div>
               </a>
             </div>
             <div class="absolute -top-4 right-0 sm:right-0 text-3xl md:text-5xl z-20 pointer-events-none">
@@ -119,7 +148,11 @@ import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
   </div>
 </div>
 
-<script define:vars={{ teamMembers }}>
+<script >
+  import { teamMembers } from "../data/teamMembers";
+  import { teamPhotos } from "../data/teamPhotos";
+
+
   let currentIndex = 0;
   let teamIndex = 0;
   let filteredMembers = teamMembers.filter(member => member.title.includes('Director'));
@@ -134,28 +167,21 @@ import LinkedInIcon from '../../public/socialIcons/linkedin-logo.svg';
 
     const member = filteredMembers[currentIndex];
 
-    document.getElementById('memberName').textContent = member.name;
-    document.getElementById('memberInfo').textContent = `${member.year} | ${member.major}`;
-    document.getElementById('memberTitle').textContent = member.title;
-    document.getElementById('memberPhoto').src = member.image;
+    const memberPhotos = document.querySelectorAll('.member-photo');
+    memberPhotos.forEach((img, i) => {
+      img.classList.toggle('hidden', teamMembers[i] !== member);
+    });
+
+    const teamPhotosElement = document.querySelectorAll('.team-photo');
+    teamPhotosElement.forEach((img, i) => {
+      const teamName = Object.keys(teamPhotos)[i];
+      img.classList.toggle('hidden', !member.title.includes(teamName));
+    });
+
+    document.getElementById('memberName')!!.textContent = member.name;
+    document.getElementById('memberInfo')!!.textContent = `${member.year} | ${member.major}`;
+    document.getElementById('memberTitle')!!.textContent = member.title;
     document.querySelectorAll('.memberLink').forEach(l => {l.href = member.linkedin;});
-
-    const teamPhotoMap = {
-      'Director': '/teams/director.webp',
-      'Logistics': '/teams/logistics.webp',
-      'Experience': '/teams/experience.webp',
-      'Web Development': '/teams/web_dev.webp',
-      'Communications': '/teams/communications.webp',
-      'Outreach': '/teams/outreach.webp'
-    };
-
-    const teamPhotoElement = document.querySelector('#memberContainer #teamPhoto');
-    for (const [teamName, photoPath] of Object.entries(teamPhotoMap)) {
-      if (member.title.includes(teamName)) {
-        teamPhotoElement.src = photoPath;
-        break;
-      }
-    }
 
     if (currentIndex === 0) {
       prevBtn.disabled = true;

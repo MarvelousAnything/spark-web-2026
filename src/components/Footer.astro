@@ -2,6 +2,8 @@
 import InstagramIcon from "../../public/socialIcons/instagram-logo.svg";
 import GitHubIcon from "../../public/socialIcons/github-logo.svg";
 import LinkedInIcon from "../../public/socialIcons/linkedin-logo.svg";
+import SparkHacksLogo from "../assets/sparkhacks-logo.svg";
+import { Image } from 'astro:assets';
 ---
 
 <footer
@@ -9,7 +11,7 @@ import LinkedInIcon from "../../public/socialIcons/linkedin-logo.svg";
 	style="background: linear-gradient(#14270F 23%, #071D02 63%)"
 >
 	<div class="font-bold flex flex-col justify-center items-center">
-		<a href="/"><img src="sparkhacks-logo.svg" class="w-25"/></a>
+		<a href="/"><Image src={SparkHacksLogo} class="w-25" alt="SparkHacks logo"/></a>
 	</div>
 	<div class="font-bold flex flex-col">
 		<h1 class="tracking-widest">SparkHacks 2026</h1>

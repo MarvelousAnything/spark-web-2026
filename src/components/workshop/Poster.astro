@@ -1,5 +1,6 @@
 ---
 const { background, index, image } = Astro.props;
+import { Image } from "astro:assets";
 import PosterBulb from "./PosterBulb.astro";
 ---
 <div
@@ -20,7 +21,7 @@ import PosterBulb from "./PosterBulb.astro";
     </div>
     <div class="flex-1 h-full bg-gray-500 flex justify-center items-center text-center overflow-hidden">
       {image ? (
-        <img src={image} alt="Workshop poster" class="w-full h-full object-cover" />
+        <Image src={image} alt="Workshop poster" class="w-full h-full object-cover" />
       ) : (
         <p class="text-sm sm:text-base px-2">Coming Soon...</p>
       )}

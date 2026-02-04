@@ -1,8 +1,9 @@
 ---
-import leftStanchionImg from '../assets/leftRopes.svg?url';
-import rightStanchionImg from '../assets/rightRopes.svg?url';
-import leftSpotlight from '../assets/leftSpotlight.svg?url';
-import rightSpotlight from '../assets/rightSpotlight.svg?url';
+import leftStanchionImg from '../assets/leftRopes.svg';
+import rightStanchionImg from '../assets/rightRopes.svg';
+import leftSpotlight from '../assets/leftSpotlight.svg';
+import rightSpotlight from '../assets/rightSpotlight.svg';
+import { Image } from 'astro:assets';
 // const countdownDate = new Date("2026-01-20T08:00:00.000-06:00").getTime(); // applications open
 // const countdownDate = new Date("2026-01-27T23:59:59.000-06:00").getTime(); // applications close
 const countdownDate = new Date("2026-02-06T17:00:00.000-06:00").getTime(); // sparkhacks start
@@ -27,15 +28,15 @@ const countdownDate = new Date("2026-02-06T17:00:00.000-06:00").getTime(); // sp
     ))}
   </div>
 
-  <img src={leftStanchionImg} alt="Left Stanchion" class="absolute bottom-10 left-0 w-[35vw] md:w-[23vw] max-w-[400px] min-w-[120px] md:min-w-[180px] z-10 block" />
-  <img src={rightStanchionImg} alt="Right Stanchion" class="absolute bottom-10 right-0 w-[35vw] md:w-[23vw] max-w-[400px] min-w-[120px] md:min-w-[180px] z-10 block" />
+  <Image src={leftStanchionImg} alt="Left Stanchion" class="absolute bottom-10 left-0 w-[35vw] md:w-[23vw] max-w-[400px] min-w-[120px] md:min-w-[180px] z-10 block" />
+  <Image src={rightStanchionImg} alt="Right Stanchion" class="absolute bottom-10 right-0 w-[35vw] md:w-[23vw] max-w-[400px] min-w-[120px] md:min-w-[180px] z-10 block" />
 
   <!-- Spotlight sways -->
   <div id="leftSpotlightGroup" class="spotlight-group spotlight-left sm:block">
-    <img src={leftSpotlight} alt="Left spotlight beam" />
+    <Image src={leftSpotlight} alt="Left spotlight beam" />
   </div>
   <div id="rightSpotlightGroup" class="spotlight-group spotlight-right sm:block">
-    <img src={rightSpotlight} alt="Right spotlight beam" />
+    <Image src={rightSpotlight} alt="Right spotlight beam" />
   </div>
 
   <div class="spotlight-glow glow-center"></div>

@@ -3,6 +3,13 @@ import lamp from "../assets/workshop/lamp.svg";
 import lampSpotlight from "../assets/workshop/lampSpotlight.svg";
 import Poster from "../components/workshop/Poster.astro";
 import WorkshopEvent from "../components/workshop/WorkshopEvent.astro";
+import { Image } from "astro:assets";
+
+import GitWorkshop from "../../public/HiFi Mobile/git workshop.jpg";
+import ReactWorkshop from "../../public/HiFi Mobile/react workshop.jpg";
+import BackendWorkshop from "../../public/HiFi Mobile/backend workshop.jpg";
+import Social from "../../public/HiFi Mobile/social.jpg";
+
 
 const posterBackgrounds = [
   "conic-gradient(from 180deg at 50% 50%, #4F336E -224.89deg, #1A1F29 135.07deg, #4F336E 135.11deg, #1A1F29 495.07deg)",
@@ -13,10 +20,10 @@ const posterBackgrounds = [
 ];
 
 const posterImages = [
-  "/HiFi Mobile/git workshop.jpg",
-  "/HiFi Mobile/react workshop.jpg",
-  "/HiFi Mobile/backend workshop.jpg",
-  "/HiFi Mobile/social.jpg",
+  GitWorkshop,
+  ReactWorkshop,
+  BackendWorkshop,
+  Social
 ];
 ---
 <div id="workshops" class="bg-[#650B0D] text-white pb-16">
@@ -30,8 +37,8 @@ const posterImages = [
       class="hidden md:block absolute top-0 left-1/2 transform -translate-x-140 w-[400px] h-[600px] origin-[40px_40px] transition-all duration-700 ease-out pointer-events-none opacity-0"
       style="transform: rotate(0deg);"
     >
-      <img src={lamp.src} alt="lamp" class="absolute top-0 left-0 w-20 h-20 z-10" />
-      <img src={lampSpotlight.src} alt="spotlight beam" class="absolute top-[60px] left-[-30px] w-[400px] blur-sm" />
+      <Image src={lamp} alt="lamp" class="absolute top-0 left-0 w-20 h-20 z-10" />
+      <Image src={lampSpotlight} alt="spotlight beam" class="absolute top-[60px] left-[-30px] w-[400px] blur-sm" />
     </div>
     
     <!-- Right Lamp + Spotlight - Hidden on mobile -->
@@ -40,8 +47,8 @@ const posterImages = [
       class="hidden md:block absolute top-0 right-1/2 transform translate-x-140 w-[400px] h-[600px] origin-[360px_40px] transition-all duration-700 ease-out pointer-events-none opacity-0"
       style="transform: rotate(0deg);"
     >
-      <img src={lamp.src} alt="lamp" class="absolute top-0 right-0 w-20 h-20 z-10 -scale-x-100" />
-      <img src={lampSpotlight.src} alt="spotlight beam" class="absolute top-[60px] right-[-30px] w-[400px] -scale-x-100 blur-sm" />
+      <Image src={lamp} alt="lamp" class="absolute top-0 right-0 w-20 h-20 z-10 -scale-x-100" />
+      <Image src={lampSpotlight} alt="spotlight beam" class="absolute top-[60px] right-[-30px] w-[400px] -scale-x-100 blur-sm" />
     </div>
     
     <!-- Posters -->

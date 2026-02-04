@@ -8,6 +8,8 @@ const links = [
   { name: 'Team', href: '#team' },
   {name: 'Apply', href: 'https://dashboard.sparkhacks.org'}
 ];
+import SparkHacksLogo from "../assets/sparkhacks-logo.svg";
+import { Image } from 'astro:assets';
 ---
 
 <header
@@ -19,7 +21,7 @@ const links = [
     <div class="flex items-center">
       <!-- <span class="text-2xl font-bold whitespace-nowrap">SH 26</span> -->
       <a href="/" class="spotlight-link relative inline-block font-bold transition-colors duration-300">
-        <img src="/sparkhacks-logo.svg" width="50px"/>
+        <Image src={SparkHacksLogo} width={50} alt="SparkHacks Logo"/>
         <span class="spotlight-glow"></span>
       </a>
     </div>

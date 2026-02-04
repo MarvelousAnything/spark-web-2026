@@ -1,5 +1,6 @@
 ---
-import ticketImg from '../assets/ticket.svg?url';
+import ticketImg from '../assets/ticket.svg';
+import { Image } from 'astro:assets';
 ---
 
 <div id="resources" class="bg-linear-to-b from-[#1D0303] to-[#650B0D]  py-8 md:py-16">
@@ -16,8 +17,9 @@ import ticketImg from '../assets/ticket.svg?url';
 
     <div class="translate-x-8 lg:translate-x-12 flex-shrink md:flex-shrink-0 relative">
       <a href="https://outgoing-bubble-324.notion.site/HackPack-2026-2bdb7981cdc38079bb9bea184a6b2f69" target="_blank" class="block transition-transform hover:-translate-x-4 md:hover:-translate-x-8 lg:hover:-translate-x-12 duration-300 relative overflow-hidden group">
-        <img 
+        <Image 
           src={ticketImg} 
+          alt="ticket"
           class="w-64 sm:w-96 md:w-108 lg:w-auto"
         />
         <div class="absolute top-[0%] left-[65%] right-0 bottom-[0%] -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"></div>
