@@ -60,8 +60,8 @@ import { Image } from "astro:assets";
               <Image 
                 src={image}
                 alt={`${teamName} team`}
-                class="team-photo object-covert rounded-lg shadow-2xl grayscale"
-                class:list={{ hidden: index !== 0 }}
+                class="team-photo object-covert rounded-lg shadow-2xl grayscale inset-0 absolute  h-48 sm:h-70 md:h-90 lg:h-120 transition-opacity"
+                class:list={{ invisible: index !== 0 }}
                 data-index={index}
                 widths={[256]}
                 sizes="256px"
@@ -87,7 +87,7 @@ import { Image } from "astro:assets";
                     src={member.image}
                     alt={member.name}
                     class="member-photo absolute inset-0 object-cover z-10 transition-opacity"
-                    class:list={{ hidden: index !== 0 }}
+                    class:list={{ invisible: index !== 0 }}
                     widths={[192]}
                     sizes="192px"
                     format="webp"
@@ -169,13 +169,13 @@ import { Image } from "astro:assets";
 
     const memberPhotos = document.querySelectorAll('.member-photo');
     memberPhotos.forEach((img, i) => {
-      img.classList.toggle('hidden', teamMembers[i] !== member);
+      img.classList.toggle('invisible', teamMembers[i] !== member);
     });
 
     const teamPhotosElement = document.querySelectorAll('.team-photo');
     teamPhotosElement.forEach((img, i) => {
       const teamName = Object.keys(teamPhotos)[i];
-      img.classList.toggle('hidden', !member.title.includes(teamName));
+      img.classList.toggle('invisible', !member.title.includes(teamName));
     });
 
     document.getElementById('memberName')!!.textContent = member.name;
